@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Landing Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; color: #333; }
+
+    /* Colors */
+    :root {
+      --primary: #008080;
+      --secondary: #00a3a3;
+      --accent: #FFD700;
+      --gray: #e0e0e0;
+      --dark: #2d2d2d;
+    }
+
+    nav {
+      padding: 1rem 2rem;
+      background: #fff;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .nav-links a {
+      color: var(--dark);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--secondary);
+    }
+
+    .menu-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 1.5rem;
+      color: var(--dark);
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 5rem 2rem;
+      background: linear-gradient(to right, #ffffff, #f0f8ff);
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--dark);
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin: 1rem 0 2rem;
+      max-width: 700px;
+      color: var(--gray);
+    }
+
+    .btn-primary {
+      padding: 0.75rem 1.5rem;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-primary:hover {
+      background: var(--secondary);
+    }
+
+    .section-title {
+      text-align: center;
+      margin: 4rem 0 2rem;
+      font-size: 2rem;
+      color: var(--dark);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature-card {
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .feature-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--primary);
+    }
+
+    .feature-card p {
+      color: var(--gray);
+      line-height: 1.6;
+    }
+
+    footer {
+      padding: 2rem;
+      background: var(--dark);
+      color: white;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .menu-toggle {
+        display: block;
+        order: 1;
+      }
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+      }
+      .nav-links.active {
+        display: flex;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container navbar">
+      <div class="logo">MyCompany</div>
+      <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+      <div class="nav-links" id="navLinks">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <button class="btn-primary" onclick="alert('Coming Soon!')">Get Started</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero container">
+    <h1>Build Your Dream Project With Us</h1>
+    <p>Powerful solutions and expert guidance to help your business grow. Start today and get 30% off our launch offer.</p>
+    <button class="btn-primary">Get Started</button>
+  </section>
+
+  <section class="container">
+    <h2 class="section-title">Our Features</h2>
+    <div class="features">
+      <div class="feature-card">
+        <h3>🚀 Fast Deployment</h3>
+        <p>Launch your project quickly with our automated deployment tools and cloud infrastructure.</p>
+      </div>
+      <div class="feature-card">
+        <h3>⚡️ Real-time Analytics</h3>
+        <p>Monitor performance metrics and user behavior through intuitive dashboards and reports.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🛡️ Security First</h3>
+        <p>Advanced encryption and security protocols to protect your data and maintain compliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 MyCompany. All rights reserved.</p>
+    <p>123 Business Street, Tech City | contact@mycompany.com</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
+```
+
+README.md
+```markdown
+</html>
